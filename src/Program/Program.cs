@@ -1,4 +1,5 @@
 ﻿using System;
+using Ucu.Poo.RoleplayGame.Program.Characters;
 
 namespace Ucu.Poo.RoleplayGame.Program;
 
@@ -9,7 +10,7 @@ class Program
         SpellsBook book = new SpellsBook();
         book.AddSpell(new SpellOne());
         book.AddSpell(new SpellOne());
-
+        
         Wizard gandalf = new Wizard("Gandalf");
         gandalf.AddItem(book);
 
@@ -17,7 +18,7 @@ class Program
 
         Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
         Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
-
+        
         gimli.ReceiveAttack(gandalf.AttackValue);
 
         Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
