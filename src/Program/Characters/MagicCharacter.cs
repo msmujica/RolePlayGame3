@@ -20,40 +20,31 @@ public abstract class MagicCharacter : Character
         this.MagicalItems = magicalItems;
     }
     
-    // Sobrescribimos el método AttackValueWithItem para agregar ítems mágicos
     public override int AttackValuesWithItem()
     {
         int value = base.AttackValuesWithItem(); 
-        
+    
         foreach (IMagicalItem item in this.magicalItems)
         {
             if (item is IMagicalAttackItem)
             {
-                value += (item as IMagicalAttackItem).AttackValue;
+                value += (item as IMagicalAttackItem).AttackValueWithSpell();  
             }
         }
 
         return value;
     }
 
-    // Sobrescribimos el método DefenseValueWithItem para agregar ítems mágicos
+// Método DefenseValueWithItem en MagicCharacter
     public override int DefenseValueWithItem()
     {
-        int value = this.AttackValue;
-        
-        foreach (IItem item in this.Items)
-        {
-            if (item is IAttackItem)
-            {
-                value += (item as IAttackItem).AttackValue;
-            }
-        }
-
+        int value = base.DefenseValueWithItem();
+    
         foreach (IMagicalItem item in this.magicalItems)
         {
             if (item is IMagicalDefenseItem)
             {
-                value += (item as IMagicalDefenseItem).DefenseValue;
+                value += (item as IMagicalDefenseItem).DefenseValueWithSpell();
             }
         }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.JavaScript;
+using Ucu.Poo.RoleplayGame.Program.Items;
 
 namespace Ucu.Poo.RoleplayGame.Program.Characters;
 
@@ -72,9 +73,9 @@ public abstract class Character
         int value = this.AttackValue;
         foreach (IItem item in this.Items)
         {
-            if (item is IAttackItem)
+            if (item is IAtaque)
             {
-                value += (item as IAttackItem).AttackValue;
+                value += (item as IAtaque).ValorAtaque;
             }
         }
         return value;
@@ -85,9 +86,9 @@ public abstract class Character
             int value = this.DefenseValue;
             foreach (IItem item in this.Items)
             {
-                if (item is IDefenseItem)
+                if (item is IDefensa)
                 {
-                    value += (item as IDefenseItem).DefenseValue;
+                    value += (item as IDefensa).ValorDefensa;
                 }
             }
             return value;
