@@ -35,8 +35,8 @@ public abstract class Character
 
     public int DefenseValue
     {
-        get { return attackValue; }
-        set { attackValue = value; }
+        get { return defenseValue; }
+        set { defenseValue = value; }
     }
 
     public int EXP
@@ -63,7 +63,7 @@ public abstract class Character
         this.Health = health;
         this.AttackValue = attackValue;
         this.DefenseValue = defenseValue;
-        this.EXP = 5;
+        this.EXP = 2;
         this.Alive = true;
         this.Items = items;
     }
@@ -99,6 +99,11 @@ public abstract class Character
         if (this.DefenseValueWithItem() < power)
         {
             this.Health -= power - this.DefenseValueWithItem();
+            if (this.Health <= 0)
+            {
+                this.Alive = false;
+                Console.WriteLine($"{this.Name} ha muerto.");
+            }
         }
         else
         {
@@ -132,5 +137,10 @@ public abstract class Character
         {
             this.items.Remove(item);   
         }
+    }
+
+    public void agregarEXP(int value)
+    {
+        this.EXP += value;
     }
 }
