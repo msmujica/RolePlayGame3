@@ -12,7 +12,7 @@ public abstract class Character
     private int defenseValue;
     private int exp;
     private bool alive;
-    private List<IItem> items;
+    private List<IItem> items = new List<IItem>();
 
     public string Name
     {

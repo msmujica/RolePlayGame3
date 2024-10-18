@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using Ucu.Poo.RoleplayGame.Program.Items;
 
 namespace Ucu.Poo.RoleplayGame.Program.Characters;
 
 public abstract class MagicCharacter : Character
 {
-    private List<IMagicalItem> magicalItems;
+    private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
 
     public List<IMagicalItem> MagicalItems
     {
