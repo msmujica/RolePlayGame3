@@ -81,12 +81,18 @@ public class Encuentro
         {
             if (enemigo.Alive)
             {
-                // Ciclar sobre los héroes
-                Character heroe = this.Heroes[index % heroeCount];
-                Console.WriteLine($"{enemigo.Name} ataca a {heroe.Name} con ⚔️ {enemigo.AttackValue}");
-                heroe.ReceiveAttack(enemigo.AttackValue);
+                foreach (var heroes in this.Heroes)
+                {
+                    if (heroes.Alive)
+                    {
+                        // Ciclar sobre los héroes
+                        Character heroe = this.Heroes[index % heroeCount];
+                        Console.WriteLine($"{enemigo.Name} ataca a {heroe.Name} con ⚔️ {enemigo.AttackValuesWithItem()}");
+                        heroe.ReceiveAttack(enemigo.AttackValuesWithItem());
 
-                index++;
+                        index++;
+                    }
+                }
             }
         }
     }
@@ -101,8 +107,8 @@ public class Encuentro
                 {
                     if (enemigo.Alive)
                     {
-                        Console.WriteLine($"{heroe.Name} ataca a {enemigo.Name} con ⚔️ {heroe.AttackValue}");
-                        enemigo.ReceiveAttack(heroe.AttackValue);
+                        Console.WriteLine($"{heroe.Name} ataca a {enemigo.Name} con ⚔️ {heroe.AttackValuesWithItem()}");
+                        enemigo.ReceiveAttack(heroe.AttackValuesWithItem());
 
                         // Si el enemigo muere, el héroe gana los VP
                         if (!enemigo.Alive)

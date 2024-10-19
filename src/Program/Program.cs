@@ -9,10 +9,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Dwarf gimli = new Dwarf("Gimli", 100, 30, 20, new List<IItem> { new Espada(15), new Armadura(10) });
-        Wizard gandalf = new Wizard("Gandalf", 80, 25, 15, new List<IMagicalItem> { new SpellsBook("Grimorio", new List<Spell> { new Spell("Fuego", 20, 5) }) }, new List<IItem> { new Baston(10, 5) });
-
-        List<Character> heroes = new List<Character> { gimli, gandalf };
+        Dwarf gimli = new Dwarf("Gimli", 1, 30, 20, new List<IItem> { new Espada(15), new Armadura(10) });
+        
+        List<Character> heroes = new List<Character> { gimli };
 
         // Crear enemigos
         VillainDwarf enemyGimli = new VillainDwarf("Evil Gimli", 80, 25, 15, new List<IItem> { new Hacha(20), new Casco(5) });

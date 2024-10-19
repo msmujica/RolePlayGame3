@@ -2,7 +2,7 @@ using System;
 
 namespace Ucu.Poo.RoleplayGame.Program.Items;
 
-public abstract class ItemAtaque : IItem
+public abstract class ItemAtaque : IAtaque
 {
     private int valorataque;
 
