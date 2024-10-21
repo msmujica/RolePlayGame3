@@ -22,7 +22,9 @@ public class SpellTEST
         Spell boladefuego = new Spell(nombre, valorAtaque,valorDefensa);
         //Se verifica que el nombre del hechizo sea igual al previsto
         Assert.AreEqual(nombre, boladefuego.Name); 
+        //Se verifica que el valor ataque del hechizo sea correcto
         Assert.AreEqual(valorAtaque, boladefuego.AttackValue); 
+        //Se verifica que el valor defensa del hechizo sea correcto
         Assert.AreEqual(valorDefensa, boladefuego.DefenseValue); 
     }
 }
