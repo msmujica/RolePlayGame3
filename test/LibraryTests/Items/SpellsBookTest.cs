@@ -56,7 +56,7 @@ public class SpellsBookTEST
         //Se verifica que el valor de ataque calculado por el grimorio coincida con el valor esperado
         Assert.AreEqual(AtaqueEsperado, grimorio.AttackValueWithSpell());
         //Esta vez se setea un valor de defensa esperado por parte del escudo
-        int DefensaEsperada = 20;
+        int DefensaEsperada = 50;
         //Se verifica que el valor de la defensa del grimorio coincida con la defensa esperada
         Assert.AreEqual(DefensaEsperada, grimorio.AttackValueWithSpell());
 
