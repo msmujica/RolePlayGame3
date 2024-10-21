@@ -10,10 +10,12 @@ public class CascoTest
 {
 
     [TestMethod]
-    public void Casco_ValorAtaque()
+    public void Casco_ValorDefensa()
     {
+        // Crea un nuevo objeto Casco con 20 de casco
         var casco = new Casco(20);
-
+        
+        // Verifica que el valor de Defensa de Casco sea 20
         Assert.AreEqual(20, casco.ValorDefensa);
     }
 }
