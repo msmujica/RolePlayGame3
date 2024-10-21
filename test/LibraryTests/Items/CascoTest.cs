@@ -10,8 +10,10 @@ public class CascoTest
 {
 
     [TestMethod]
-    public void METHOD()
+    public void Casco_ValorAtaque()
     {
-        
+        var casco = new Casco(20);
+
+        Assert.AreEqual(20, casco.ValorDefensa);
     }
 }

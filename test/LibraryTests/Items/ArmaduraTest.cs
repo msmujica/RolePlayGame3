@@ -8,10 +8,11 @@ namespace LibraryTests.Items;
 [TestSubject(typeof(Armadura))]
 public class ArmaduraTest
 {
-
     [TestMethod]
-    public void METHOD()
+    public void Armadura_ValorDefensa()
     {
-        
+        var armadura = new Armadura(20);
+
+        Assert.AreEqual(20, armadura.ValorDefensa);
     }
 }

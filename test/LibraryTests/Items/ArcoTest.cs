@@ -10,8 +10,10 @@ public class ArcoTest
 {
 
     [TestMethod]
-    public void METHOD()
+    public void ArcoCreateTest()
     {
-        
+        var hacha = new Hacha(20);
+
+        Assert.AreEqual(20, hacha.ValorAtaque);
     }
 }
