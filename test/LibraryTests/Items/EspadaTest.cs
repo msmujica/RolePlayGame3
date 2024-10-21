@@ -8,10 +8,13 @@ namespace LibraryTests.Items;
 [TestSubject(typeof(Espada))]
 public class EspadaTest
 {
-
     [TestMethod]
-    public void METHOD()
+    public void Espada_ValorAtaque()
     {
+        // Crea un nuevo objeto Espada con 20 de daño
+        var espada = new Espada(20);
         
+        // Verifica que el valor de Ataque de Espada sea 20
+        Assert.AreEqual(20, espada.ValorAtaque);
     }
 }

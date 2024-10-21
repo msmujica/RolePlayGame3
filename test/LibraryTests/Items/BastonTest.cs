@@ -10,8 +10,13 @@ public class BastonTest
 {
 
     [TestMethod]
-    public void METHOD()
+    public void Baston_ValorAtaque()
     {
-        
+        // Crea un nuevo objeto baston con 20 de defensa y ataque
+        var baston = new Baston(20, 20);
+
+        // Verifica que el valor de Defensa y Ataque del baston sea 20
+        Assert.AreEqual(20, baston.ValorAtaque);
+        Assert.AreEqual(20, baston.ValorDefensa);
     }
 }

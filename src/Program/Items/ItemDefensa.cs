@@ -17,6 +17,7 @@ public abstract class ItemDefensa : IDefensa
         this.ValorDefensa = valorDefensa;
     }
 
+    // Método para mostrar las estadísticas del ítem
     public void MostrarStats()
     {
         Console.WriteLine($"La defensa de su item es: {this.ValorDefensa}");
