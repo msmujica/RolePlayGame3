@@ -11,9 +11,8 @@ public class EspadaTest
     [TestMethod]
     public void Espada_ValorAtaque()
     {
-        var espada = new Espada();
-        espada.ValorAtaque = 20;
-
+        var espada = new Espada(20);
+        
         Assert.AreEqual(20, espada.ValorAtaque);
     }
 }

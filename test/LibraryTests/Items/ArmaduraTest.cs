@@ -11,8 +11,7 @@ public class ArmaduraTest
     [TestMethod]
     public void Armadura_ValorDefensa()
     {
-        var armadura = new Armadura();
-        armadura.ValorDefensa = 20;
+        var armadura = new Armadura(20);
 
         Assert.AreEqual(20, armadura.ValorDefensa);
     }

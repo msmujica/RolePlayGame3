@@ -12,8 +12,7 @@ public class CascoTest
     [TestMethod]
     public void Casco_ValorAtaque()
     {
-        var casco = new Casco();
-        casco.ValorDefensa = 20;
+        var casco = new Casco(20);
 
         Assert.AreEqual(20, casco.ValorDefensa);
     }

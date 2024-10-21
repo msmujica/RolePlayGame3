@@ -20,8 +20,4 @@
     <ProjectReference Include="..\..\src\Program\Program.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CharactesTests\" />
-  </ItemGroup>
-
 </Project>

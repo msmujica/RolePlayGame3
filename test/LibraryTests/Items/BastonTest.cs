@@ -12,9 +12,9 @@ public class BastonTest
     [TestMethod]
     public void Baston_ValorAtaque()
     {
-        var baston = new Baston();
-        baston.ValorAtaque = 20;
+        var baston = new Baston(20, 20);
 
         Assert.AreEqual(20, baston.ValorAtaque);
+        Assert.AreEqual(20, baston.ValorDefensa);
     }
 }
