@@ -1,14 +1,15 @@
-using NUnit.Framework;
+using JetBrains.Annotations;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ucu.Poo.RoleplayGame.Program.Items;
 
 namespace LibraryTests.Items;
 
-[TestFixture]
-[TestOf(typeof(SpellsBook))]
+[TestClass]
+[TestSubject(typeof(SpellsBook))]
 public class SpellsBookTEST
 {
 
-    [Test]
+    [TestMethod]
     public void CrearLibro()
     {
         string nombre = "Grimorio";
@@ -20,21 +21,22 @@ public class SpellsBookTEST
 
         SpellsBook grimorio = new SpellsBook(nombre, hechizos);
 
-        //Assert.AreEqual(nombre, grimorio.Name);
-        //Assert.AreEqual(hechizos, grimorio.Spells);
+        Assert.AreEqual(nombre, grimorio.Name);
+        Assert.AreEqual(hechizos, grimorio.Spells);
     }
 
-    [Test]
+    [TestMethod]
     public void AgregaryRemoverHechizo()
     {
         SpellsBook grimorio = new SpellsBook("Grimorio", new List<Spell>());
         Spell boladefuego = new Spell("Bola de fuego", 50, 20);
         grimorio.AddSpell(boladefuego);
-        //Assert.Contains(boladefuego, grimorio.Spells);
-        //Assert.IsFalse(grimorio.Spells.Contains(boladefuego));
+        CollectionAssert.Contains(grimorio.Spells,boladefuego);
+        grimorio.RemoveSpell(boladefuego);
+        Assert.IsFalse(grimorio.Spells.Contains(boladefuego));
     }
 
-    [Test]
+    [TestMethod]
     public void ValorAtaqueDefensa()
     {
         Spell boladefuego = new Spell("Bola de fuego", 50, 20);
@@ -43,10 +45,10 @@ public class SpellsBookTEST
         SpellsBook grimorio = new SpellsBook("Grimorio", new List<Spell>{boladefuego,escudo});
 
         int AtaqueEsperado = 50;
-        //Assert.AreEqual(AtaqueEsperado, grimorio.AttackValueWithSpell());
+        Assert.AreEqual(AtaqueEsperado, grimorio.AttackValueWithSpell());
 
         int DefensaEsperada = 50;
-        //Assert.AreEqual(DefensaEsperada, grimorio.AttackValueWithSpell());
+        Assert.AreEqual(DefensaEsperada, grimorio.AttackValueWithSpell());
 
     }
 }

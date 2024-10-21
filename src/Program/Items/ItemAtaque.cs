@@ -6,6 +6,7 @@ public abstract class ItemAtaque : IAtaque
 {
     private int valorataque;
 
+    // Constructor que inicializa el valor de ataque
     public int ValorAtaque
     {
         get { return valorataque; }
@@ -17,6 +18,7 @@ public abstract class ItemAtaque : IAtaque
         this.ValorAtaque = valorAtaque;
     }
 
+    // Método para mostrar las estadísticas del ítem
     public void MostrarStats()
     {
         Console.WriteLine($"El ataque de su item es: {this.ValorAtaque}");
