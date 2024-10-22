@@ -13,13 +13,13 @@ public class VillainDwarfTest
     [TestMethod]
     public void VillianDwarf_Creacion()
     {
-
+        //Se crea instancia con nombre, vida, daño, defensa y lista de items
         var villianDwarf = new VillainDwarf("Fabrizio", 80, 60, 25, new List<IItem>());
         
-        Assert.AreEqual("Fabrizio", villianDwarf.Name);
-        Assert.AreEqual(80, villianDwarf.Health);
-        Assert.AreEqual(60, villianDwarf.AttackValue);
-        Assert.AreEqual(25, villianDwarf.DefenseValue);
+        Assert.AreEqual("Fabrizio", villianDwarf.Name);//Verifica que ese sea su nombre
+        Assert.AreEqual(80, villianDwarf.Health);// Verifica que su vida sea 80
+        Assert.AreEqual(60, villianDwarf.AttackValue);// Verifica que su ataque sea 60
+        Assert.AreEqual(25, villianDwarf.DefenseValue);// Verifica que su defensa sea 25
         
     }
 }

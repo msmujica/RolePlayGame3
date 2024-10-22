@@ -13,13 +13,13 @@ public class VillainArcherTest
     [TestMethod]
     public void VillianArcher_Creacion()
     {
-
+        //Se crea instancia con nombre, vida, daño, defensa y lista de items
         var villianArcher = new VillainArcher("Salogel", 80, 60, 25, new List<IItem>());
         
-        Assert.AreEqual("Salogel", villianArcher.Name);
-        Assert.AreEqual(80, villianArcher.Health);
-        Assert.AreEqual(60, villianArcher.AttackValue);
-        Assert.AreEqual(25, villianArcher.DefenseValue);
+        Assert.AreEqual("Salogel", villianArcher.Name);//Verifica que ese sea su nombre
+        Assert.AreEqual(80, villianArcher.Health);// Verifica que su vida sea 80
+        Assert.AreEqual(60, villianArcher.AttackValue);// Verifica que su ataque sea 60
+        Assert.AreEqual(25, villianArcher.DefenseValue);// Verifica que su defensa sea 25
         
     }
 }

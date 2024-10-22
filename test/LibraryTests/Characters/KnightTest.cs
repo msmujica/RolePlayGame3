@@ -13,13 +13,13 @@ public class KnightTest
     [TestMethod]
     public void Knight_Creacion()
     {
-
+        //Se crea instancia con nombre, vida, daño, defensa y lista de items
         var knight = new Knight("Aragorn", 80, 60, 25, new List<IItem>());
         
-        Assert.AreEqual("Aragorn", knight.Name);
-        Assert.AreEqual(80, knight.Health);
-        Assert.AreEqual(60, knight.AttackValue);
-        Assert.AreEqual(25, knight.DefenseValue);
+        Assert.AreEqual("Aragorn", knight.Name);//Verifica que ese sea su nombre
+        Assert.AreEqual(80, knight.Health);// Verifica que su vida sea 80
+        Assert.AreEqual(60, knight.AttackValue);// Verifica que su ataque sea 60
+        Assert.AreEqual(25, knight.DefenseValue);// Verifica que su defensa sea 25
         
     }
 }
